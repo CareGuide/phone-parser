@@ -1,6 +1,6 @@
 # Contributing
 
-Everyone is welcome to contribute to SpamParser. Contributing doesn’t just mean submitting pull requests—there are many different ways for you to get involved, including answering questions, reporting or triaging [issues](https://github.com/CareGuide/spam-parser/issues), et al.
+Everyone is welcome to contribute to Ramparts. Contributing doesn’t just mean submitting pull requests—there are many different ways for you to get involved, including answering questions, reporting or triaging [issues](https://github.com/CareGuide/ramparts/issues), et al.
 
 No matter how you want to get involved, we ask that you be kind, and treat others on the project with respect.
 
@@ -39,4 +39,4 @@ The goal of this process is to keep the list of open issues and pull requests fo
 
 # Pull Request Reviews & releasing
 
-Once pull request has been given approval, leadership will realease and deploy the gem (See [Roadmap](https://github.com/CareGuide/spam-parser/blob/master/ROADMAP.md)) for automatic deploys)
+Once pull request has been given approval, leadership will realease and deploy the gem (See [Roadmap](https://github.com/CareGuide/ramparts/blob/master/ROADMAP.md)) for automatic deploys)
