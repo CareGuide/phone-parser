@@ -29,12 +29,12 @@ end
 def scan(text, regex, type)
   text
     .enum_for(:scan, regex)
-    .map {
+    .map do
       {
-          start_offset: Regexp.last_match.begin(0),
-          end_offset: Regexp.last_match.to_s.length,
-          value: Regexp.last_match.to_s,
-          type: type
+        start_offset: Regexp.last_match.begin(0),
+        end_offset: Regexp.last_match.to_s.length,
+        value: Regexp.last_match.to_s,
+        type: type
       }
-    }
+    end
 end

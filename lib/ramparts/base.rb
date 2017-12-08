@@ -59,7 +59,6 @@ class Ramparts
     phone_instances + email_instances
   end
 
-  # rubocop:disable MethodLength
   def self.replace_phone_numbers_and_emails(text, insertable, options = {})
     pp = PhoneParser.new
     ep = EmailParser.new
