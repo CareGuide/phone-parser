@@ -9,12 +9,27 @@ accept, pull requests within a few days. We may suggest some changes or improvem
 
 Some things that will increase the chance that your pull request is accepted:
 
-* Make sure the tests pass
+* Make sure the tests pass (this includes linting)
 * Update the documentation: code comments, example code, guides. Basically,
   update everything affected by your contribution.
 * Include any information that would be relevant to reproducing bugs, use cases for new features, etc.
 * If the change does break compatibility, how can it be updated to become backwards compatible, while directing users to the new way of doing things?
 * A suitable and well thought throught commit message
+
+# Branch Naming
+
+Please follow the following naming convention for branch names.
+
+- Use `feature/...` for feature related changes
+- Use `fix/...` for changes that fix a bug
+- Use `refactor/...` for general refactors of the code (eg. cleaning the code, adding comments)
+- Finally use `update/...` for general updates that aren't refactors or bug fixes but aren't major enough to fall under features
+
+# Testing
+
+Run linting tests on your branch simply by typing `rubocop` when within the top level directory
+
+Run general unit tests simply by typing `rspec` when within the top level directory
 
 # Stale issue and pull request policy
 
