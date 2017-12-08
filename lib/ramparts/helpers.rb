@@ -14,3 +14,27 @@ MR_ALGO = 'MR'
 # than the map reduce algorithm. No information loss occurs
 # so we can return indices of where the phone numbers and etc. exist
 GR_ALGO = 'GR'
+
+# Given some text it replaces each matched instance with the given insertable
+def replace(text, insertable, instances)
+  extra_offset = 0
+  instances.map do |instance|
+    text[extra_offset + instance[:start_offset]...extra_offset + instance[:end_offset]] = insertable
+    extra_offset += insertable.size - instance[:value].size
+  end
+  instances
+end
+
+# Given some text it scans the text with the given regex for matches
+def scan(text, regex, type)
+  text
+    .enum_for(:scan, regex)
+    .map {
+      {
+          start_offset: Regexp.last_match.begin(0),
+          end_offset: Regexp.last_match.to_s.length,
+          value: Regexp.last_match.to_s,
+          type: type
+      }
+    }
+end
