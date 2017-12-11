@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 PHONE_TRUTHY_WITH_ANSWERS_AND_SPACES = [
   [["f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE"], "If you're interested in this position, do contact me directly on my phone number f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE )."]
 ]

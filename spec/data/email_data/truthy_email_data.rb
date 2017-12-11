@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 EMAIL_TRUTHY_WITH_ANSWERS = [
    [["jbush042@gmail.com"], "My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( jbush042@gmail.com ) She will be waiting to hear from you kindly send her an email now!"],
    [["Virginiap002@aol.com"], "Hello dear. My name is Virginia,I'm currently in Texas but in process of moving to your area,I read your profile on nannylane.com and will like to have you as my sons nanny. Starting from on the 27 of November,9AM-1PM,Mon-Fri or on weekends basis.They are 5&1+ years respectively,i am willing to pay $20/hr am sure these is good for you,just because i want the best care for my sons.Email me your resume/references to (Virginiap002@aol.com) for more details,Hope to read from you soon"],

@@ -2,7 +2,7 @@ AllCops:
   TargetRubyVersion: 2.3
   Exclude:
     - 'ramparts.gemspec'
-    - 'spec/data/**/*'
+    - './spec/data/**/*'
 
 ClassLength:
   Enabled: false
