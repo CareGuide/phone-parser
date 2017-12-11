@@ -4,5 +4,5 @@ cache:
   bundler: true
 
 script:
-  - git diff --diff-filter=ACMRTUXB --name-only origin/master... | grep -E '\.rb$' | xargs --no-run-if-empty bundle exec rubocop
+  - bundle exec rubocop
   - bundle exec rspec ./spec/
