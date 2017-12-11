@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 require './lib/ramparts'
 
 INSERTABLE = 'CENSORED'
@@ -60,7 +59,6 @@ end
 def test_replacements(iterator, method, options = {})
   iterator.each do |block|
     text = Ramparts.send(method, block[1], INSERTABLE, options)
-    binding.pry
     if text.casecmp(block[2]) != 0
       raise "Expected: #{block[2]}\nGot: #{text}\nBlock '#{block[1]}'"
     end
