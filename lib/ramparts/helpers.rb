@@ -1,4 +1,6 @@
-# frozen_string_literal: true
+# frozen_string_literal: false
+
+require 'pry'
 
 ARGUMENT_ERROR_TEXT = 'Parameter 1, the block of text to parse, is not a string'
 
@@ -17,12 +19,12 @@ GR_ALGO = 'GR'
 
 # Given some text it replaces each matched instance with the given insertable
 def replace(text, insertable, instances)
-  extra_offset = 0
+  altered_text = String.new(text)
+
   instances.map do |instance|
-    text[extra_offset + instance[:start_offset]...extra_offset + instance[:end_offset]] = insertable
-    extra_offset += insertable.size - instance[:value].size
+    altered_text[instance[:start_offset]...instance[:end_offset]] = insertable
   end
-  instances
+  altered_text
 end
 
 # Given some text it scans the text with the given regex for matches
@@ -32,9 +34,19 @@ def scan(text, regex, type)
     .map do
       {
         start_offset: Regexp.last_match.begin(0),
-        end_offset: Regexp.last_match.to_s.length,
+        end_offset: Regexp.last_match.begin(0) + Regexp.last_match.to_s.length,
         value: Regexp.last_match.to_s,
         type: type
       }
     end
+end
+
+# Checks to see if a point intersects a substring given their offsets
+def point_intersect?(p1, p2_start, p2_end)
+  return p1 >= p2_start && p1 <= p2_end
+end
+
+# Checks to see if two substrings intersect given their offsets
+def intersect?(p1_start, p1_end, p2_start, p2_end)
+  return point_intersect?(p1_start, p2_start, p2_end) || point_intersect?(p1_end, p2_start, p2_end)
 end

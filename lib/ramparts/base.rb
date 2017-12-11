@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'pry'
+
 require_relative './parsers/email_parser'
 require_relative './parsers/phone_parser'
 require_relative './parsers/url_parser'
@@ -47,15 +49,24 @@ class Ramparts
 
     phone_instances = pp.count_phone_number_instances(text, options)
     email_instances = ep.count_email_instances(text, options)
-    (phone_instances + email_instances).length
+    phone_instances + email_instances
   end
 
   def self.find_phone_numbers_and_emails(text, options = {})
     pp = PhoneParser.new
     ep = EmailParser.new
 
-    phone_instances = pp.count_phone_number_instances(text, options)
-    email_instances = ep.count_email_instances(text, options)
+    phone_instances = pp.find_phone_number_instances(text, options)
+    email_instances = ep.find_email_instances(text, options)
+
+    if options.fetch(:compare, false)
+      phone_instances.each do |phone|
+        email_instances.delete_if do |email|
+          intersect?(phone[:start_offset], phone[:end_offset], email[:start_offset], email[:end_offset])
+        end
+      end
+    end
+
     phone_instances + email_instances
   end
 
@@ -63,10 +74,24 @@ class Ramparts
     pp = PhoneParser.new
     ep = EmailParser.new
 
-    phone_instances = pp.count_phone_number_instances(text, options)
-    email_instances = ep.count_email_instances(text, options)
+    phone_instances = pp.find_phone_number_instances(text, options)
+    email_instances = ep.find_email_instances(text, options)
     total_instances = phone_instances + email_instances
 
-    replace(text, insertable, total_instances)
+    if options.fetch(:compare, false)
+      phone_instances.each do |phone|
+        email_instances.delete_if do |email|
+          intersect?(phone[:start_offset], phone[:end_offset], email[:start_offset], email[:end_offset])
+        end
+      end
+    end
+
+    # We have no idea the order or these unless we would ran the regex for both at the same time.
+    # Instead we sort by start offset and then reverse so that we can replace from the end of the
+    # string to the start to not screw up indices. Apparently this is the fastest way to sort in reverse
+    # https://stackoverflow.com/questions/2642182/sorting-an-array-in-descending-order-in-ruby#answer-2651028
+    total_instances_sorted = total_instances.sort_by { |instance| instance[:start_offset] }.reverse!
+
+    replace(text, insertable, total_instances_sorted)
   end
 end

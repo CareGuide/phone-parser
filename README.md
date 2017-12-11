@@ -44,9 +44,9 @@ Count the occurrences of well known spam URLs and keywords
 - **Input:**
     - text **[String]** 
     - options **[Hash]**
-        - parse_leet **[Boolean][Default &rightarrow; False]**
+        - parse_leet **[Boolean][Default &rightarrow; True]**
             - Parses phone numbers that contain l33t syntax. With this set to true eg. `FivE 4 3 F0r On3 67 NiN3` would be caught.
-        - remove_spaces **[Boolean][Default &rightarrow; False]**
+        - remove_spaces **[Boolean][Default &rightarrow; True]**
             - Parses phone numbers that contain spaces between the numbers. With this set to true eg. `F i v E 4 3 F 0 r O n 3 67 N i N 3` would be caught.
 - **Output:** 
     - number of occurrences of phone numbers **[Integer]**
@@ -146,6 +146,10 @@ of text.
  - **Input:**
      - text **[String]** 
      - options **[Hash]**
+         - parse_leet **[Boolean][Default &rightarrow; True]**
+            - Parses phone numbers that contain l33t syntax. With this set to true eg. `FivE 4 3 F0r On3 67 NiN3` would be caught.
+         - remove_spaces **[Boolean][Default &rightarrow; True]**
+            - Parses phone numbers that contain spaces between the numbers. With this set to true eg. `F i v E 4 3 F 0 r O n 3 67 N i N 3` would be caught.
          - aggressive **[Boolean] [Default &rightarrow; `False`]**
             - doesn't require a `.` or `dot` + a TLD at the end, but instead compares the last word against a well known list of email domains (eg. `contact ashley @ yandex for more info` would be caught)
  - **Output:** 
@@ -161,6 +165,10 @@ of text.
 - **Input:**
     - text **[String]** 
     - options **[Hash]**
+        - parse_leet **[Boolean][Default &rightarrow; True]**
+            - Parses phone numbers that contain l33t syntax. With this set to true eg. `FivE 4 3 F0r On3 67 NiN3` would be caught.
+        - remove_spaces **[Boolean][Default &rightarrow; True]**
+            - Parses phone numbers that contain spaces between the numbers. With this set to true eg. `F i v E 4 3 F 0 r O n 3 67 N i N 3` would be caught.
         - aggressive **[Boolean] [Default &rightarrow; `False`]**
             - doesn't require a `.` or `dot` + a TLD at the end, but instead compares the last word against a well known list of email domains (eg. `contact ashley @ yandex for more info` would be caught)
  - **Output:** 
@@ -180,6 +188,10 @@ of text.
     - text **[String]**
     - insertable **[String]**
     - options **[Hash]**
+         - parse_leet **[Boolean][Default &rightarrow; True]**
+            - Parses phone numbers that contain l33t syntax. With this set to true eg. `FivE 4 3 F0r On3 67 NiN3` would be caught.
+         - remove_spaces **[Boolean][Default &rightarrow; True]**
+            - Parses phone numbers that contain spaces between the numbers. With this set to true eg. `F i v E 4 3 F 0 r O n 3 67 N i N 3` would be caught.
          - aggressive **[Boolean] [Default &rightarrow; `False`]**
             - doesn't require a `.` or `dot` + a TLD at the end, but instead compares the last word against a well known list of email domains (eg. `contact ashley @ yandex for more info` would be caught)
 - **Output:** 

@@ -38,14 +38,14 @@ class EmailParser
   # rubocop:disable LineLength
 
   # Regex to find the emails, must have .com or something similar to match
-  GR_REGEX = Regexp.new(/(([#{TEXT_MATCH}]{1}[^\w]{1})+|([#{TEXT_MATCH}])+)([^\w]+(at){1}[^\w]+|[^\w]*@[^\w]*){1}[a-z0-9.-]+(([^\w]*\.[^\w]*|[^\w]+(dot){1}[^\w]+){1}[a-z]{2,})+/)
+  GR_REGEX = Regexp.new(/(([#{TEXT_MATCH}]{1}[^\w]{1})+|([#{TEXT_MATCH}])+)([^\w]+(at){1}[^\w]+|[^\w]*@[^\w]*){1}[a-z0-9.-]+((\.|[^\w]+(dot){1}[^\w]+){1}[a-z]{2,})+/)
   # Regex to find the emails, does .com or something similar to match
   GR_REGEX_WITHOUT_DOT = Regexp.new(/(([#{TEXT_MATCH}]{1}[^\w]{1})+|([#{TEXT_MATCH}])+)([^\w]+(at){1}[^\w]+|[^\w]*@[^\w]*){1}[a-z0-9.-]+([^\w]*\.[^\w]*|[^\w]+(dot){1}[^\w]+)?([a-z]{2,})?/)
 
   # rubocop:enable LineLength
 
   # Regex to find emails for MapReduce, must have .com or something similar to match
-  MR_REGEX = Regexp.new(/[a-z0-9._%+-]+\${,2}@{1}\${,2}[a-z0-9.-]+\${,2}(\.){1}/)
+  MR_REGEX = Regexp.new(/[a-z0-9._%+-]+\${,2}@{1}\${,2}[a-z0-9.-]+\${,2}(\.){1}[a-z]{2,}/)
   # Regex to find emails for MapReduce, does not have to have .com or something similar to match
   MR_REGEX_WITHOUT_DOT = Regexp.new(/[a-z0-9._%+-]+\${,2}@{1}\${,2}[a-z0-9.-]+/)
 

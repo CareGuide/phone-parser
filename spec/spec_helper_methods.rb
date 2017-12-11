@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'pry'
 require './lib/ramparts'
+
+INSERTABLE = 'CENSORED'
 
 # Times a method run length in milliseconds
 def time_method(method, *args)
@@ -46,9 +49,20 @@ def test_truthy_finds(iterator, method, options = {})
     matches = Ramparts.send(method, block[1], options)
     block[0].each_with_index do |match_string, index|
       if matches[index].nil? || matches[index][:value].casecmp(match_string) != 0
-        got_result = matches[index].nil? ? 'NIL' : matches[index][1]
+        got_result = matches[index].nil? ? 'NIL' : matches[index][:value]
         raise "Expected: #{match_string}\nGot: #{got_result}\nBlock '#{block[1]}'\nResult: #{matches}"
       end
+    end
+  end
+end
+
+# Test helper for testing truthy values against find type methods
+def test_replacements(iterator, method, options = {})
+  iterator.each do |block|
+    text = Ramparts.send(method, block[1], INSERTABLE, options)
+    binding.pry
+    if text.casecmp(block[2]) != 0
+      raise "Expected: #{block[2]}\nGot: #{text}\nBlock '#{block[1]}'"
     end
   end
 end

@@ -115,11 +115,11 @@ class PhoneParser
 
   # Parses the phone number for MR, uses a variety of options
   def parse_phone_number(text, options)
-    text = text.delete(' ') if options.fetch(:remove_spaces, false)
+    text = text.delete(' ') if options.fetch(:remove_spaces, true)
 
     text = text.downcase.gsub(/#{REGEX_PHONETICS}/, REPLACEMENTS)
 
-    if options.fetch(:parse_leet, false)
+    if options.fetch(:parse_leet, true)
       text = text.gsub(/#{REGEX_LEET_SPEAK}/, LEET_REPLACEMENTS)
     end
 

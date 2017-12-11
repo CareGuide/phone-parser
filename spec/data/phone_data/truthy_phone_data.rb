@@ -1,8 +1,8 @@
-PHONE_TRUTHY_WITH_ANSWER_AND_SPACES = [
+PHONE_TRUTHY_WITH_ANSWERS_AND_SPACES = [
   [["f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE"], "If you're interested in this position, do contact me directly on my phone number f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE )."]
 ]
 
-PHONE_TRUTHY_WITH_ANSWER = [
+PHONE_TRUTHY_WITH_ANSWERS = [
   [["3.2.3.4.3.8.4.8.3.8"], "I need a babysitter and errand for my son textme direct on my number if you are interested 3.2.3.4.3.8.4.8.3.8"],
   [["6477005290"], "Aron's phone number is 6477005290"],
   [["three four seven nine 3 two five one zero two"], "i Rebecca! I saw your profile and would like to know more. my name is Adriana Medrano, from TIDY N' CLEAN CLEANING SERVICES LLC, this message regarding your request for housekeeping services, I'm a very responsable and honest house cleaner, let me help you clean your house. please call or text me at three four seven nine 3 two five one zero two, I'm looking forward to serve you"],
