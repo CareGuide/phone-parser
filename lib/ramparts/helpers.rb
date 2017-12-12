@@ -39,12 +39,7 @@ def scan(text, regex, type)
     end
 end
 
-# Checks to see if a point intersects a substring given their offsets
-def point_intersect?(p1, p2_start, p2_end)
-  p1 >= p2_start && p1 <= p2_end
-end
-
-# Checks to see if two substrings intersect given their offsets
-def intersect?(p1_start, p1_end, p2_start, p2_end)
-  point_intersect?(p1_start, p2_start, p2_end) || point_intersect?(p1_end, p2_start, p2_end)
+# Check if two ranges overlap
+def ranges_overlap?(r1, r2)
+  r1.cover?(r2.first) || r2.cover?(r1.first)
 end

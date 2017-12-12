@@ -59,8 +59,10 @@ class Ramparts
 
     if options.fetch(:compare, false)
       phone_instances.each do |phone|
+        phone_range = (phone[:start_offset]...phone[:end_offset])
         email_instances.delete_if do |email|
-          intersect?(phone[:start_offset], phone[:end_offset], email[:start_offset], email[:end_offset])
+          email_range = (email[:start_offset]...email[:end_offset])
+          ranges_overlap?(phone_range, email_range)
         end
       end
     end
@@ -78,8 +80,10 @@ class Ramparts
 
     if options.fetch(:compare, false)
       phone_instances.each do |phone|
+        phone_range = (phone[:start_offset]...phone[:end_offset])
         email_instances.delete_if do |email|
-          intersect?(phone[:start_offset], phone[:end_offset], email[:start_offset], email[:end_offset])
+          email_range = (email[:start_offset]...email[:end_offset])
+          ranges_overlap?(phone_range, email_range)
         end
       end
     end
