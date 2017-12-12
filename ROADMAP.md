@@ -11,3 +11,4 @@
 - [ ] Have check domain (for email matches) as an option to allow for reduce over matching
 - [ ] Check TLD to make sure it's a valid TLD as an option to reduce over matching
 - [ ] Refactor tests to use hashes instead of arrays
+- [ ] Robust-ify the overlapping interval scenario
