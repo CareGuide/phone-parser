@@ -84,7 +84,7 @@ class Ramparts
       end
     end
 
-    # We have no idea the order or these unless we would ran the regex for both at the same time.
+    # We have no idea the order of the matches unless we ran the regex for both occurrences at the same time.
     # Instead we sort by start offset and then reverse so that we can replace from the end of the
     # string to the start to not screw up indices. Apparently this is the fastest way to sort in reverse
     # https://stackoverflow.com/questions/2642182/sorting-an-array-in-descending-order-in-ruby#answer-2651028
