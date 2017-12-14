@@ -10,7 +10,7 @@
 - [ ] Use threads for true Map/Reduce. Look into [Celluloid](https://github.com/celluloid/celluloid)
 - [ ] Have check domain (for email matches) as an option (not only on :aggressive option) to reduce over matching
 - [ ] Check TLD to make sure it's a valid TLD as an option to reduce over matching
-- [ ] Refactor tests to use hashes instead of arrays
+- [x] Refactor tests to use hashes instead of arrays
 - [ ] Robust-ify the overlapping interval scenario
 - [ ] Get setup on Code Climate once the repo goes open source
 - [ ] Think about using InchCI (inline docs) instead of README
