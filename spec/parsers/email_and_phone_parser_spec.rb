@@ -31,6 +31,10 @@ describe '#replace_phone_numbers_and_emails' do
   it 'replaces a number of positive test blocks correctly with multi method' do
     test_replacements(EMAIL_PHONE_TRUTHY_WITH_ANSWERS, :replace_phone_numbers_and_emails)
   end
+
+  it 'replaces a number of positive test blocks correctly with multi method and compare option' do
+    test_replacements(EMAIL_PHONE_TRUTHY_WITH_ANSWERS, :replace_phone_numbers_and_emails, compare: true)
+  end
 end
 
 describe 'Map/Reduce to Regex Run Time' do
