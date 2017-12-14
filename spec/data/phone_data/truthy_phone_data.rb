@@ -3,11 +3,11 @@
 require_relative '../../spec_constants'
 
 PHONE_TRUTHY_WITH_ANSWERS_AND_SPACES = [
-    {
-      matches: ["f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE"],
-      text: "If you're interested in this position, do contact me directly on my phone number f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE ).",
-      filtered: "If you're interested in this position, do contact me directly on my phone number #{INSERTABLE})."
-    }
+  {
+    matches: ["f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE"],
+    text: "If you're interested in this position, do contact me directly on my phone number f i v e - ( F O U R . O N E . 5 . E I G H T . n i N E . F O U R . T W O . E I G H T . SIX . FIVE ).",
+    filtered: "If you're interested in this position, do contact me directly on my phone number #{INSERTABLE})."
+  }
 ].freeze
 
 PHONE_TRUTHY_WITH_ANSWERS = [
@@ -44,7 +44,7 @@ PHONE_TRUTHY_WITH_ANSWERS = [
   {
     matches: ["(1THREE4) 226 FOUR OH FIVE 8/9.TWO.1"],
     text: "(1THREE4) 226 FOUR OH FIVE 8/9.TWO.1",
-    filtered:  "#{INSERTABLE}"
+    filtered:  INSERTABLE
   },
   {
     matches: ["two,zero,nine,two,one,seven,nine,nine,four,seven"],
@@ -105,5 +105,5 @@ PHONE_TRUTHY_WITH_ANSWERS = [
     matches: ["213........788......... 5383"],
     text: "Hi there, Hope you had a great weekend. I am impressed with your profile on here and would like to know more about you. I am looking to employ an experienced,loyal, dedicated, caring and responsible person to look after my dogs due to my very busy schedule with work. If you're interested in this position, do contact me directly on my phone number 213........788......... 5383. Hope you cracked that number code. I'd prefer you text first with an introduction then I can give you a call back. Have a great day ahead. tanosha",
     filtered:  "Hi there, Hope you had a great weekend. I am impressed with your profile on here and would like to know more about you. I am looking to employ an experienced,loyal, dedicated, caring and responsible person to look after my dogs due to my very busy schedule with work. If you're interested in this position, do contact me directly on my phone number #{INSERTABLE}. Hope you cracked that number code. I'd prefer you text first with an introduction then I can give you a call back. Have a great day ahead. tanosha"
-  },
+  }
 ].freeze
