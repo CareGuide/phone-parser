@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../spec_helper'
+require_relative '../../spec_constants'
 
 # Please place phone number answers first for testing
 # It shouldn't matter if we implemented stronger test matchers

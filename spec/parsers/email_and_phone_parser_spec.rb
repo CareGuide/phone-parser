@@ -13,7 +13,7 @@ describe '#count_phone_numbers_and_emails' do
   end
 end
 
-describe '#find_phone_numbers' do
+describe '#find_phone_numbers_and_emails' do
   it 'parses a number of positive test blocks correctly with multi method' do
     test_truthy_finds(EMAIL_PHONE_TRUTHY_WITH_ANSWERS, :find_phone_numbers_and_emails)
   end
@@ -27,7 +27,7 @@ describe '#find_phone_numbers' do
   end
 end
 
-describe '#replace_phone_numbers' do
+describe '#replace_phone_numbers_and_emails' do
   it 'replaces a number of positive test blocks correctly with multi method' do
     test_replacements(EMAIL_PHONE_TRUTHY_WITH_ANSWERS, :replace_phone_numbers_and_emails)
   end

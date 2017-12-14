@@ -33,6 +33,12 @@ describe '#find_emails' do
   end
 end
 
+describe '#replace_emails' do
+  it 'replaces a number of positive test blocks correctly with email replacer' do
+    test_replacements(EMAIL_TRUTHY_WITH_ANSWERS, :replace_emails)
+  end
+end
+
 describe 'Map/Reduce to Regex Run Time' do
   it 'times the two methods against each other' do
     compare_run_times(EMAIL_TRUTHY_WITH_ANSWERS, :count_emails, :find_emails)

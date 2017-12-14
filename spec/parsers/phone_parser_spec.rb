@@ -43,6 +43,12 @@ describe '#find_phone_numbers' do
   end
 end
 
+describe '#replace_phone_numbers' do
+  it 'replaces a number of positive test blocks correctly with phone replacer' do
+    test_replacements(PHONE_TRUTHY_WITH_ANSWERS, :replace_phone_numbers)
+  end
+end
+
 describe 'Map/Reduce to Regex Run Time' do
   it 'times the two methods against each other' do
     compare_run_times(PHONE_TRUTHY_WITH_ANSWERS, :count_phone_numbers, :find_phone_numbers)

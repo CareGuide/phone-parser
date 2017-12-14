@@ -5,8 +5,7 @@ require 'simplecov'
 SimpleCov.start
 
 require './lib/ramparts'
-
-INSERTABLE = 'CENSORED'
+require 'spec_constants'
 
 # Times a method run length in milliseconds
 def time_method(method, *args)
