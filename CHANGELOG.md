@@ -2,6 +2,7 @@
 
 ## 0.2.1 (14/12/2017)
 - Creating a `spec_helper.rb` and implement SimpleCov tool
+- Refactored test architecture to use hashes instead of arrays
 
 ## 0.2.0 (12/12/2017)
 - Implementation of multi functions that allows parsing of both email and phone in same method
