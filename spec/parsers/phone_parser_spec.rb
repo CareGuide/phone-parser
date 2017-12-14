@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require './lib/ramparts'
-require_relative '../spec_helper_methods'
 require_relative '../data/phone_data/truthy_phone_data'
 require_relative '../data/phone_data/falsy_phone_data'
 

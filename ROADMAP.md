@@ -12,4 +12,7 @@
 - [ ] Check TLD to make sure it's a valid TLD as an option to reduce over matching
 - [ ] Refactor tests to use hashes instead of arrays
 - [ ] Robust-ify the overlapping interval scenario
-- [ ] Creating a `spec_helper.rb` and use tools like SimpleCov, Shoulda matchers, and test randomization.
+- [ ] Get setup on Code Climate once the repo goes open source
+- [ ] Think about using InchCI (inline docs) instead of README
+- [x] Creating a `spec_helper.rb` and use tools like SimpleCov, 
+- [ ] Look into using Shoulda matchers, and test randomization.
