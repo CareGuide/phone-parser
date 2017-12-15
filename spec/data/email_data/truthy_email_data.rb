@@ -29,8 +29,8 @@ EMAIL_TRUTHY_WITH_ANSWERS = [
     filtered:  "Hi, Are you a baby sitter? If yes,I am in need of a babysitter/Nanny for my 3 yr old daughter clara,If you are interested, Kindly contact me for more information on #{INSERTABLE} for me details of the Job."
   },
   {
-    matches: ["josepamela12000 at gmail.com"],
-    text: "Hello, My name is Pamela, I read your profile on sitter.com on the possition of nanny, and i would like you to have you in taking care of my son, am always busy due to work issues and other housing issues, this job starting from 30th of November. I'm willing to pay $30/hour, 9am-1pm, Mondays-Thursdays 'or' 9am- 4pm Weekend basis, you can send me an email confirming your interest, or email me with your resume at (josepamela12000 at gmail.com) to know your qualification, and your passion for the job. will be glad to work with you, await your email Thanks. Pamela",
+    matches: ["josepakela12000 at gmail.com"],
+    text: "Hello, My name is Pamela, I read your profile on sitter.com on the possition of nanny, and i would like you to have you in taking care of my son, am always busy due to work issues and other housing issues, this job starting from 30th of November. I'm willing to pay $30/hour, 9am-1pm, Mondays-Thursdays 'or' 9am- 4pm Weekend basis, you can send me an email confirming your interest, or email me with your resume at (josepakela12000 at gmail.com) to know your qualification, and your passion for the job. will be glad to work with you, await your email Thanks. Pamela",
     filtered:  "Hello, My name is Pamela, I read your profile on sitter.com on the possition of nanny, and i would like you to have you in taking care of my son, am always busy due to work issues and other housing issues, this job starting from 30th of November. I'm willing to pay $30/hour, 9am-1pm, Mondays-Thursdays 'or' 9am- 4pm Weekend basis, you can send me an email confirming your interest, or email me with your resume at (#{INSERTABLE}) to know your qualification, and your passion for the job. will be glad to work with you, await your email Thanks. Pamela"
   },
   {
