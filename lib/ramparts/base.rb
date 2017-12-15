@@ -11,14 +11,14 @@ class Ramparts
     pp.count_phone_number_instances(text, options)
   end
 
-  def self.replace_phone_numbers(text, options = {}, &block)
-    pp = PhoneParser.new
-    pp.replace_phone_number_instances(text, options, &block)
-  end
-
   def self.find_phone_numbers(text, options = {})
     pp = PhoneParser.new
     pp.find_phone_number_instances(text, options)
+  end
+
+  def self.replace_phone_numbers(text, options = {}, &block)
+    pp = PhoneParser.new
+    pp.replace_phone_number_instances(text, options, &block)
   end
 
   def self.count_emails(text, options = {})
@@ -26,14 +26,14 @@ class Ramparts
     ep.count_email_instances(text, options)
   end
 
-  def self.replace_emails(text, options = {}, &block)
-    ep = EmailParser.new
-    ep.replace_email_instances(text, options, &block)
-  end
-
   def self.find_emails(text, options = {})
     ep = EmailParser.new
     ep.find_email_instances(text, options)
+  end
+
+  def self.replace_emails(text, options = {}, &block)
+    ep = EmailParser.new
+    ep.replace_email_instances(text, options, &block)
   end
 
   def self.count_urls(text, options = {})

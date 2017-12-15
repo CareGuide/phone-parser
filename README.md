@@ -73,7 +73,7 @@ space variations are used.
     - **Output:** `[{start_offset: 84, end_offset: 133, type: :phone, value: 'FOUR ONE FIVE E I G H T 9 FOUR TOO EIGHT SIX FIVE'}]`
 
 #### replace_phone_numbers(text, insertable, options = {})
-- **Description:** Replaces all the occurrences of phone numbers within the text with `insertable`. Returns the redacted block
+- **Description:** Replaces all the occurrences of phone numbers within the text with what is returned in the block. Returns the redacted text.
 of text.
 - **Input:**
     - text **[String]** 
@@ -83,6 +83,7 @@ of text.
 - **Output:** 
     - updated text **[String]**
 - **Example**
+    - **Usage:** `altered_text = replace_phone_numbers(...) do CENSORED end`
     - **Input:** 
         - text &rightarrow; `"If you're interested in this position, do contact me directly on my phone number ( FOUR ONE FIVE E I G H T 9 FOUR TWO EIGHT SIX FIVE  ). Hope you cracked that number code."`
         - insertable &rightarrow; `"CENSORED"`
@@ -123,17 +124,17 @@ of text.
     - **Output:** `[{start_offset: 78, end_offset: 106, type: :email, value: 'ashley73299 AT yahoo dot com'}, {start_offset: 118, end_offset: 143, type: :email, value: 'ashley73299 @ yahoo . com'}]`
 
 #### replace_emails(text, insertable, options = {})
-- **Description:** Replaces all the occurrences of emails within the text with `insertable`. Returns the redacted text
+- **Description:** Replaces all the occurrences of emails within the text with what is returned in the block. Returns the redacted text
 of text.
 - **Input:**
     - text **[String]**
-    - insertable **[String]**
     - options **[Hash]**
          - aggressive **[Boolean] [Default &rightarrow; `False`]**
             - doesn't require a `.` or `dot` + a TLD at the end, but instead compares the last word against a well known list of email domains (eg. `contact ashley @ yandex for more info` would be caught)
 - **Output:** 
     - updated text **[String]**   
 - **Example**
+    - **Usage:** `altered_text = replace_emails(...) do CENSORED end`
     - **Input:** 
         - text &rightarrow; `"My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( jbush042@gmail.com ) She will be waiting to hear from you kindly send her an email now!"`
         - insertable &rightarrow; `"CENSORED"`
@@ -182,11 +183,10 @@ of text.
     - **Output:** `[{start_offset: 78, end_offset: 106, type: :email, value: 'ashley73299 AT yahoo dot com'}, {start_offset: 115, end_offset: 132, type: :phone, value: 'FOUR FIVE ONE 456 8900'}]`
 
 #### replace_phone_numbers_and_emails(text, insertable, options = {})
-- **Description:** Replaces all the occurrences of phone numbers and emails within the text with `insertable`. Returns the redacted text
+- **Description:** Replaces all the occurrences of phone numbers and emails within the text with what is returned from the block. Returns the redacted text
 of text.
 - **Input:**
     - text **[String]**
-    - insertable **[String]**
     - options **[Hash]**
          - parse_leet **[Boolean][Default &rightarrow; True]**
             - Parses phone numbers that contain l33t syntax. With this set to true eg. `FivE 4 3 F0r On3 67 NiN3` would be caught.
@@ -197,6 +197,7 @@ of text.
 - **Output:** 
     - updated text **[String]**   
 - **Example**
+    - **Usage:** `altered_text = replace_phone_numbers_and_emails(...) do CENSORED end`
     - **Input:** 
         - text &rightarrow; `"My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( jbush042@gmail.com or FOUR FIVE ONE 789 4568 ) She will be waiting to hear from you kindly send her an email now!"`
         - insertable &rightarrow; `"CENSORED"`
