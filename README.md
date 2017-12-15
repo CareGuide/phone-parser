@@ -86,7 +86,6 @@ of text.
     - **Usage:** `altered_text = replace_phone_numbers(...) do CENSORED end`
     - **Input:** 
         - text &rightarrow; `"If you're interested in this position, do contact me directly on my phone number ( FOUR ONE FIVE E I G H T 9 FOUR TWO EIGHT SIX FIVE  ). Hope you cracked that number code."`
-        - insertable &rightarrow; `"CENSORED"`
     - **Output:** `"If you're interested in this position, do contact me directly on my phone number ( CENSORED  ). Hope you cracked that number code."`
 
 #### count_emails(text, options = {})
@@ -137,7 +136,6 @@ of text.
     - **Usage:** `altered_text = replace_emails(...) do CENSORED end`
     - **Input:** 
         - text &rightarrow; `"My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( jbush042@gmail.com ) She will be waiting to hear from you kindly send her an email now!"`
-        - insertable &rightarrow; `"CENSORED"`
     - **Output:** `My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( CENSORED ) She will be waiting to hear from you kindly send her an email now!`
 
 #### count_phone_numbers_and_emails(text, options = {})
@@ -200,7 +198,6 @@ of text.
     - **Usage:** `altered_text = replace_phone_numbers_and_emails(...) do CENSORED end`
     - **Input:** 
         - text &rightarrow; `"My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( jbush042@gmail.com or FOUR FIVE ONE 789 4568 ) She will be waiting to hear from you kindly send her an email now!"`
-        - insertable &rightarrow; `"CENSORED"`
     - **Output:** `My name is Cynthia, a friend of mine needs a nanny to watch her baby in your area, her contact is ( CENSORED or CENSORED ) She will be waiting to hear from you kindly send her an email now!`
 
 #### count_urls(text, options = {})
