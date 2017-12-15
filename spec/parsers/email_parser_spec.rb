@@ -34,9 +34,7 @@ describe '#find_emails' do
     test_truthy_finds(EMAIL_TRUTHY_AT, :find_emails, check_for_at: true)
   end
 
-  # it 'finds a number of positive aggressive test blocks correctly with aggressive option' do
-  #   test_truthy_finds(EMAIL_TRUTHY_AGGRESSIVE, :find_emails, aggressive: true)
-  # end
+  # TODO: Update algorithm to be able to pass test with EMAIL_TRUTHY_AGGRESSIVE
 
   it 'finds a number of negative test blocks correctly and regex only' do
     test_falsy_finds(EMAIL_FALSY_BLOCKS, :find_emails)
@@ -52,9 +50,7 @@ describe '#replace_emails' do
     test_replacements(EMAIL_TRUTHY_AT, :replace_emails, check_for_at: true)
   end
 
-  # it 'replaces a number of positive aggressive test blocks correctly with aggressive option' do
-  #   test_replacements(EMAIL_TRUTHY_AGGRESSIVE, :replace_emails, aggressive: true)
-  # end
+  # TODO: Update algorithm to be able to pass test with EMAIL_TRUTHY_AGGRESSIVE
 end
 
 describe 'Map/Reduce to Regex Run Time' do
