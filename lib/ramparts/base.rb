@@ -11,9 +11,9 @@ class Ramparts
     pp.count_phone_number_instances(text, options)
   end
 
-  def self.replace_phone_numbers(text, insertable, options = {})
+  def self.replace_phone_numbers(text, options = {}, &block)
     pp = PhoneParser.new
-    pp.replace_phone_number_instances(text, insertable, options)
+    pp.replace_phone_number_instances(text, options, &block)
   end
 
   def self.find_phone_numbers(text, options = {})
@@ -26,9 +26,9 @@ class Ramparts
     ep.count_email_instances(text, options)
   end
 
-  def self.replace_emails(text, insertable, options = {})
+  def self.replace_emails(text, options = {}, &block)
     ep = EmailParser.new
-    ep.replace_email_instances(text, insertable, options)
+    ep.replace_email_instances(text, options, &block)
   end
 
   def self.find_emails(text, options = {})
@@ -70,7 +70,7 @@ class Ramparts
     phone_instances + email_instances
   end
 
-  def self.replace_phone_numbers_and_emails(text, insertable, options = {})
+  def self.replace_phone_numbers_and_emails(text, options = {}, &block)
     pp = PhoneParser.new
     ep = EmailParser.new
 
@@ -94,6 +94,6 @@ class Ramparts
     # https://stackoverflow.com/questions/2642182/sorting-an-array-in-descending-order-in-ruby#answer-2651028
     total_instances_sorted = total_instances.sort_by { |instance| instance[:start_offset] }.reverse!
 
-    replace(text, insertable, total_instances_sorted)
+    replace(text, total_instances_sorted, &block)
   end
 end
