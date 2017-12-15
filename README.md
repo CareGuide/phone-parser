@@ -72,7 +72,7 @@ space variations are used.
         - text &rightarrow; `"If you're interested in this position, do contact me directly on my phone number ( FOUR ONE FIVE E I G H T 9 FOUR TWO EIGHT SIX FIVE  ). Hope you cracked that number code."`
     - **Output:** `[{start_offset: 84, end_offset: 133, type: :phone, value: 'FOUR ONE FIVE E I G H T 9 FOUR TOO EIGHT SIX FIVE'}]`
 
-#### replace_phone_numbers(text, options = {})
+#### replace_phone_numbers(text, options = {}, &block)
 - **Description:** Replaces all the occurrences of phone numbers within the text with what is returned in the block. Returns the redacted text.
 of text.
 - **Input:**
@@ -122,7 +122,7 @@ of text.
         - text &rightarrow; `"Hi, Are you seriously interested ..Looking for honest worker .. My e-mail is ashley73299 AT yahoo dot com, I repeat ashley73299 @ yahoo . com ?.. Ashley"`
     - **Output:** `[{start_offset: 78, end_offset: 106, type: :email, value: 'ashley73299 AT yahoo dot com'}, {start_offset: 118, end_offset: 143, type: :email, value: 'ashley73299 @ yahoo . com'}]`
 
-#### replace_emails(text, options = {})
+#### replace_emails(text, options = {}, &block)
 - **Description:** Replaces all the occurrences of emails within the text with what is returned in the block. Returns the redacted text
 of text.
 - **Input:**
@@ -180,7 +180,7 @@ of text.
         - text &rightarrow; `"Hi, Are you seriously interested ..Looking for honest worker .. My e-mail is ashley73299 AT yahoo dot com, phone 416 090 78 NINE 5 ?.. Ashley"`
     - **Output:** `[{start_offset: 78, end_offset: 106, type: :email, value: 'ashley73299 AT yahoo dot com'}, {start_offset: 115, end_offset: 132, type: :phone, value: 'FOUR FIVE ONE 456 8900'}]`
 
-#### replace_phone_numbers_and_emails(text, options = {})
+#### replace_phone_numbers_and_emails(text, options = {}, &block)
 - **Description:** Replaces all the occurrences of phone numbers and emails within the text with what is returned from the block. Returns the redacted text
 of text.
 - **Input:**
