@@ -17,8 +17,8 @@ PHONE_TRUTHY_WITH_ANSWERS = [
     filtered:  "I need a babysitter and errand for my son textme direct on my number if you are interested #{INSERTABLE}"
   },
   {
-    matches: ["6477005290"],
-    text: "Aron's phone number is 6477005290",
+    matches: ["5557005290"],
+    text: "Aron's phone number is 5557005290",
     filtered:  "Aron's phone number is #{INSERTABLE}"
   },
   {
