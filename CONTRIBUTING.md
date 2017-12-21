@@ -31,7 +31,7 @@ Run linting tests on your branch simply by typing `rubocop` when within the top 
 
 Run general unit tests simply by typing `rspec` when within the top level directory
 
-When writing tests please have the first three digits (not the area code) of phone numbers as `555` (or the phonetic/l33t equivalent) to avoid collisions with actual phone numbers
+When writing tests please have the [first three digits](https://en.wikipedia.org/wiki/555_(telephone_number)) (not the area code) of phone numbers as `555` (or the phonetic/l33t equivalent) to avoid collisions with actual phone numbers
 
 Please also use `example` for the domain of test email addresses for a similar reason
 
